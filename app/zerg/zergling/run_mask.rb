@@ -8,6 +8,7 @@ module ScGraphicConverter
         @image_prefix = 'zergling_shade'
         @output_file = 'zergling-run-mask'
         @add_border = false
+        @colorize_mask = true
       end
     end
   end

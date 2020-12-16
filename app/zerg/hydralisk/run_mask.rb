@@ -8,6 +8,7 @@ module ScGraphicConverter
         @image_prefix = 'hydralisk_shade'
         @output_file = 'hydralisk-run-mask'
         @add_border = false
+        @colorize_mask = true
       end
     end
   end

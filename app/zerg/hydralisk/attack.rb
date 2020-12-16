@@ -10,8 +10,9 @@ module ScGraphicConverter
         @frame_count = 5
         @directions = 16
         @output_file = 'hydralisk-attack'
-        @inner_path = 'unit/zerg/sprites/hydralisk'
+        @inner_path = 'bmps/zerg/hydralisk'
         @add_border = true
+        @filename_digits = 3
       end
     end
   end

@@ -10,7 +10,7 @@ module ScGraphicConverter
         @frame_count = 7
         @directions = 1
         @output_file = 'hydralisk-death'
-        @inner_path = 'unit/zerg/sprites/hydralisk'
+        @inner_path = 'bmps/zerg/hydralisk'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

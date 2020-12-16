@@ -5,9 +5,10 @@ module ScGraphicConverter
     class RunMask < Run
       def initialize
         super
-        @image_prefix = 'mutalisk_shade'
+        @image_prefix = 'mutalisk'
         @output_file = 'mutalisk-run-mask'
         @add_border = false
+        @colorize_mask = true
       end
     end
   end

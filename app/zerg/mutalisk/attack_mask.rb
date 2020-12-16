@@ -4,9 +4,10 @@ module ScGraphicConverter
     class AttackMask < Attack
       def initialize
         super
-        @image_prefix = 'mutalisk_shade'
+        @image_prefix = 'mutalisk'
         @output_file = 'mutalisk-attack-mask'
         @add_border = false
+        @colorize_mask = true
       end
     end
   end

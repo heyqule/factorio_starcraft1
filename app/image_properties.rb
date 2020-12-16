@@ -1,7 +1,8 @@
 module ScGraphicConverter
   class ImageProperties
     attr_reader :frame_start, :frame_end, :image_prefix, :image_postfix, :frame_count, :directions,
-                :bypass_even_row, :use_flip, :size, :use_17_rule, :shift, :add_border
+                :bypass_even_row, :use_flip, :size, :use_17_rule, :shift, :add_border, :filename_digits,
+                :colorize_mask
     def initialize
       @frame_start = 0
       @frame_end = 84
@@ -17,6 +18,8 @@ module ScGraphicConverter
       @inner_path = 'path/to/inner/folder'
       @shift = [0, 0]
       @add_border = true
+      @colorize_mask = false
+      @filename_digits = 0
     end
 
     def output_temp_file(temp)

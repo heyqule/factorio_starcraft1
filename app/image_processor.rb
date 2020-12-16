@@ -3,11 +3,13 @@ module ScGraphicConverter
     def initialize(image_properties)
       @image_properties = image_properties
     end
+
     def perform
       check_output_file
       stack_images
       process_transparency
       add_borders
+      colorize_mask
     end
 
     def stack_images
@@ -47,6 +49,18 @@ module ScGraphicConverter
           convert << ')'
           convert << '-compose' << 'DstOver'
           convert << '-composite'
+          convert << @image_properties.output_file
+        end
+      end
+    end
+
+    def colorize_mask
+      if @image_properties.colorize_mask
+        MiniMagick::Tool::Convert.new do |convert|
+          convert << @image_properties.output_file
+          convert << '-colorspace' << 'gray'
+          convert << '-fill' << 'red'
+          convert << '-tint' << '100'
           convert << @image_properties.output_file
         end
       end
@@ -123,7 +137,7 @@ module ScGraphicConverter
       else
         frame_num = @image_properties.frame_start + ((i*@image_properties.directions)+j)
       end
-      frame_num.to_s.rjust(3, "0")
+      frame_num.to_s.rjust(@image_properties.filename_digits, "0")
     end
   end
 end
