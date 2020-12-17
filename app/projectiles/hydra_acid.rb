@@ -1,20 +1,19 @@
 module ScGraphicConverter
-  module Mutalisk
-    class Death < ScGraphicConverter::ImageProperties
+  module Projectiles
+    class HydraAcid < ScGraphicConverter::ImageProperties
       def initialize
         super
         @frame_start = 0
         @frame_end = 7
-        @image_prefix = 'zerg_small_air_blood'
+        @image_prefix = 'hydra_acid';
         @image_postfix = '.bmp'
         @frame_count = 8
         @directions = 1
-        @output_file = 'mutalisk-death'
-        @inner_path = 'bmps/thingy/zerg_small_air_blood'
+        @output_file = 'hydra_acid'
+        @inner_path = 'bmps/projectile/hydra_acid'
         @use_17_rule = false
         @use_flip = false
         @add_border = false
-        @start_with_image = 'mutalisk_death.bmp'
       end
     end
   end

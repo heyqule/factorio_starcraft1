@@ -20,6 +20,9 @@ module ScGraphicConverter
       @add_border = true
       @colorize_mask = false
       @filename_digits = 0
+      #only apply to single direction
+      @start_with_image = nil
+      @end_with_image = nil
     end
 
     def output_temp_file(temp)
@@ -32,6 +35,16 @@ module ScGraphicConverter
 
     def input_file(frame)
       File.join([Configs::INPUT_FOLDER, @inner_path, "#{image_prefix} #{frame}#{image_postfix}"])
+    end
+
+    def start_with_image
+      return nil if @start_with_image.nil?
+      File.join([Configs::INPUT_FOLDER, @inner_path, @start_with_image])
+    end
+
+    def end_with_image
+      return nil if @end_with_image.nil?
+      File.join([Configs::INPUT_FOLDER, @inner_path, @end_with_image])
     end
   end
 end

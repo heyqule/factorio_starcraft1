@@ -74,6 +74,12 @@ module ScGraphicConverter
         end
 
         MiniMagick::Tool::Convert.new do |convert|
+          unless @image_properties.directions != 1 || @image_properties.start_with_image.nil?
+            convert.stack do |stack|
+              stack << @image_properties.start_with_image
+            end
+          end
+
           for j in 0..(@image_properties.frame_count-1)
             puts "processing flip:#{@image_properties.use_flip}, #{i} #{j}, +#{j * @image_properties.size}+#{i * @image_properties.size}"
             source_image = @image_properties.input_file(calculate_frame(i, j))
@@ -89,6 +95,12 @@ module ScGraphicConverter
             convert.stack do |stack|
               convert << "-flop" if flip && i != 0
               stack << source_image
+            end
+          end
+
+          unless @image_properties.directions != 1 || @image_properties.end_with_image.nil?
+            convert.stack do |stack|
+              stack << @image_properties.end_with_image
             end
           end
 
