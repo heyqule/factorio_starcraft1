@@ -8,8 +8,8 @@ require './autoloader'
 # convert_unit('Mutalisk', attack: false, attack_mask:false)
 # convert_unit('Devourer')
 # convert_unit('Guardian', attack: false, attack_mask:false)
-#convert_unit('Overlord', attack: false, attack_mask:false)
-convert_unit('Drone', attack: false, attack_mask:false)
+convert_unit('Overlord', attack: false, attack_mask:false)
+#convert_unit('Drone', attack: false, attack_mask:false)
 #convert_lurker
 
 #Projectiles

@@ -5,12 +5,12 @@ module ScGraphicConverter
         super
         @frame_start = 0
         @frame_end = 7
-        @image_prefix = 'zerg_small_air_blood'
+        @image_prefix = 'zerg_large_air_blood'
         @image_postfix = '.bmp'
         @frame_count = 8
         @directions = 1
         @output_file = 'overlord-death'
-        @inner_path = 'bmps/thingy/zerg_small_air_blood'
+        @inner_path = 'bmps/thingy/zerg_large_air_blood'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

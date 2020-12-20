@@ -6,7 +6,7 @@ module ScGraphicConverter
       def initialize
         super
         @image_prefix = 'lurker_shade'
-        @output_file = 'lurker-run-mask'
+        @output_file = 'lurker-unburrow-mask'
         @add_border = false
         @colorize_mask = true
       end
