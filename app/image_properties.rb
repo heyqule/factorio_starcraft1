@@ -12,15 +12,16 @@ module ScGraphicConverter
       @frame_count = 5
       @directions = 16
       @output_file = 'example-run'
-      @bypass_even_row = true
-      @use_flip = true
-      @use_17_rule = true
+      @bypass_even_row = true #this could be GRP decoder problem, most grp file have 2 rows of same animations.
+      @use_flip = true #to generate 16 directions when sc1 data only provides half of the directions.
+      @use_17_rule = true #for SC1's 17 frames animation jump
       @inner_path = 'path/to/inner/folder'
-      @shift = [0, 0]
-      @add_border = true
-      @colorize_mask = false
-      @filename_digits = 0
-      #only apply to single direction
+      @shift = [0, 0] #don't think it's working yet
+      @add_border = true #add black border around the entity
+      @colorize_mask = false #colorize image to red to use as mask
+      @filename_digits = 0 #how many digit in filename sequence.  e.g set this to 3 when it's "zerg 001.bpm"
+
+      #The following only apply to single direction, the image must be in the inner_path
       @start_with_image = nil
       @end_with_image = nil
     end

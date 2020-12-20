@@ -67,11 +67,10 @@ module ScGraphicConverter
     end
 
     def process_original_stack(flip = false)
-      for i in 0..(@image_properties.directions-1)
+      for i in 0..(@image_properties.directions)
         next if @image_properties.bypass_even_row && i%2 == 1
-        if flip && (i == 0)
-          i == 16
-        end
+        next if flip && (i == 0)
+        next if flip && (i == @image_properties.directions && @image_properties.directions > 1)
 
         MiniMagick::Tool::Convert.new do |convert|
           unless @image_properties.directions != 1 || @image_properties.start_with_image.nil?
@@ -83,9 +82,11 @@ module ScGraphicConverter
           for j in 0..(@image_properties.frame_count-1)
             puts "processing flip:#{@image_properties.use_flip}, #{i} #{j}, +#{j * @image_properties.size}+#{i * @image_properties.size}"
             source_image = @image_properties.input_file(calculate_frame(i, j))
+            puts source_image
 
-            if flip && i != 0
+            if flip && (i > 0 && i < @image_properties.directions)
               source_image = @image_properties.input_file(calculate_frame(@image_properties.directions-i, j))
+              puts source_image
             end
 
             if @image_properties.shift[0] != 0 || @image_properties.shift[1] != 0
@@ -93,7 +94,7 @@ module ScGraphicConverter
             end
 
             convert.stack do |stack|
-              convert << "-flop" if flip && i != 0
+              convert << "-flop" if flip && (i > 0 && i < @image_properties.directions)
               stack << source_image
             end
           end
@@ -108,15 +109,6 @@ module ScGraphicConverter
           convert << @image_properties.output_temp_file(get_temp_file(i, flip))
         end
 
-        if flip && (i == 0)
-          i == 0
-        end
-
-        if i==0
-          @vertical_convert << @image_properties.output_temp_file(get_temp_file(i, flip))
-          next
-        end
-
         @vertical_convert.stack do |v_stack|
           v_stack << @image_properties.output_temp_file(get_temp_file(i, flip))
         end
@@ -124,6 +116,7 @@ module ScGraphicConverter
     end
 
     def get_temp_file(i, flip)
+      return "#{i}-flip-#{false}" if i == 16
       "#{i}-flip-#{flip}"
     end
 
