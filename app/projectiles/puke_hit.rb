@@ -13,6 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/thingy/puke_hit'
         @filename_digits = 3
         @use_flip = false
+        @add_border = false
       end
     end
   end

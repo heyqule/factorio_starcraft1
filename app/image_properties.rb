@@ -30,6 +30,10 @@ module ScGraphicConverter
       File.join(Configs::INPUT_FOLDER, 'generator', @inner_path,  'temp', "#{@output_file}-#{temp}.png")
     end
 
+    def output_temp_folder
+      File.join(Configs::INPUT_FOLDER, 'generator', @inner_path,  'temp')
+    end
+
     def output_file
       File.join(Configs::INPUT_FOLDER, 'generator',@inner_path,"#{@output_file}.png")
     end

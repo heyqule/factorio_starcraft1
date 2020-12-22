@@ -1,16 +1,16 @@
 module ScGraphicConverter
-  module Zergling
+  module Defiler
     class Run < ScGraphicConverter::ImageProperties
       def initialize
         super
-        @frame_start = 85
-        @frame_end = 203
-        @image_prefix = 'zergling';
+        @frame_start = 0
+        @frame_end = 135
+        @image_prefix = 'defiler';
         @image_postfix = '.bmp'
-        @frame_count = 5
+        @frame_count = 8
         @directions = 16
-        @output_file = 'zergling-run'
-        @inner_path = 'bmps/zerg/zergling'
+        @output_file = 'defiler-run'
+        @inner_path = 'bmps/zerg/defiler'
         @add_border = true
         @filename_digits = 3
       end

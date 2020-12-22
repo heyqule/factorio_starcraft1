@@ -1,17 +1,17 @@
 module ScGraphicConverter
-  module Zergling
+  module Defiler
     class Death < ScGraphicConverter::ImageProperties
       def initialize
         super
-        @frame_start = 289
-        @frame_end = 295
-        @image_prefix = 'zergling';
+        @frame_start = 136
+        @frame_end = 203
+        @image_prefix = 'defiler';
         @image_postfix = '.bmp'
-        @frame_count = 7
+        @frame_count = 4
         @directions = 1
-        @output_file = 'zergling-death'
-        @inner_path = 'bmps/zerg/zergling'
-        @use_17_rule = false
+        @output_file = 'defiler-death'
+        @inner_path = 'bmps/zerg/defiler'
+        @use_17_rule = true
         @use_flip = false
         @add_border = false
       end

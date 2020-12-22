@@ -10,6 +10,7 @@ module ScGraphicConverter
       process_transparency
       add_borders
       colorize_mask
+      remove_temp
     end
 
     def stack_images
@@ -43,7 +44,9 @@ module ScGraphicConverter
           convert << '('
           convert << '+clone'
           convert << '-channel' << 'A'
-          convert << '-morphology' << 'EdgeOut' << 'Diamond'
+          #onvert << '-morphology'  << 'Dilate' << 'Diamond'
+          #convert << '-morphology'  << 'Dilate' << 'Disk'
+          convert << '-morphology'  << 'Dilate' << 'Octagon'
           convert << '+channel'
           convert << '+level-colors' << 'black'
           convert << ')'
@@ -143,6 +146,10 @@ module ScGraphicConverter
         frame_num = @image_properties.frame_start + ((i*@image_properties.directions)+j)
       end
       frame_num.to_s.rjust(@image_properties.filename_digits, "0")
+    end
+
+    def remove_temp
+      FileUtils.rm_rf(@image_properties.output_temp_folder)
     end
   end
 end
