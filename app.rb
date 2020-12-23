@@ -13,7 +13,7 @@ require './autoloader'
 # convert_lurker
 # convert_unit('Queen')
 # convert_unit('Defiler', attack: false, attack_mask:false)
-convert_unit('Infested', attack: false, attack_mask:false)
+# convert_unit('Infested', attack: false, attack_mask:false)
 
 # Particles
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::SporesA.new).perform
@@ -23,6 +23,7 @@ convert_unit('Infested', attack: false, attack_mask:false)
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::LurkerSpike.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DevourerPuke.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::PukeHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DefilerBlood.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::HydraProjectile.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::ZergBuildingBlood.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::ZergBuildingSmallRubble.new).perform
@@ -41,6 +42,6 @@ convert_unit('Infested', attack: false, attack_mask:false)
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SpawningPool.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Spire.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Spore.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunker.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkerAttack.new).perform
+# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunker.new).perform
+# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkerAttack.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::UltralistCavern.new).perform
