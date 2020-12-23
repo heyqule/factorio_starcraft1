@@ -4,10 +4,10 @@ module ScGraphicConverter
       def initialize
         super
         @frame_start = 0
-        @frame_end = 3
+        @frame_end = 2
         @image_prefix = 'sunker_colony';
         @image_postfix = '.bmp'
-        @frame_count = 4
+        @frame_count = 3
         @directions = 1
         @output_file = 'sunker_colony'
         @inner_path = 'bmps/zerg_building/sunker_colony'
