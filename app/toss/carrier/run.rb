@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'carrier'
         @inner_path = 'bmps/toss/carrier'
-        @add_border = false
+        @add_border = true
         @filename_digits = 2
       end
     end
