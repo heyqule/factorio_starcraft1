@@ -23,7 +23,7 @@ require './autoloader'
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::LurkerSpike.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DevourerPuke.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::PukeHit.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DefilerBlood.new).perform
+# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DefilerBlood.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::HydraProjectile.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::ZergBuildingBlood.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::ZergBuildingSmallRubble.new).perform
