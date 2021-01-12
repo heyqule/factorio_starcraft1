@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'darkarchon-run'
         @inner_path = 'bmps/toss/darkarchon'
-        @add_border = true
+        @add_border = false
         @filename_digits = 3
       end
     end

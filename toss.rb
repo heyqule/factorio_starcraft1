@@ -5,8 +5,8 @@ require './autoloader'
 
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Arbiter::Run.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Arbiter::Effect.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Run.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).perform
+# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Run.new).perform
+# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Run.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Effect.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Interceptor::Run.new).perform
@@ -20,11 +20,11 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkTemplar::Run.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkTemplar::Attack.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkTemplar::Run.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Attack.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Run.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Effect.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Run.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Effect.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Attack.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Effect.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Effect.new).perform
 # convert_unit('Zealot')
 # convert_unit('Dragoon')
 
