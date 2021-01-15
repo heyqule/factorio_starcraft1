@@ -50,6 +50,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Nexus.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Pylon.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Stargate.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TemplarArchive.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Gateway.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossBuildingDeath.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossLargeRubble.new).perform
