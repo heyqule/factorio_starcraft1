@@ -74,7 +74,7 @@ end
 
 FileUtils.cp(
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"bmps/custom_pngs/protoss/projectiles/stasis.png"]),
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/projectiles/stasis.png"])
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/projectiles/stasis/stasis.png"])
 )
 
 puts 'Copying Icons'
