@@ -72,3 +72,14 @@ FileUtils.cp(
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/lurker-burrow-combined.png']),
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-burrow-combined.png'])
 )
+
+puts "Copying Fillers"
+dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/buildings']);
+unless File.directory?(dirname)
+  FileUtils.mkdir_p(dirname)
+end
+
+FileUtils.copy_entry(
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/buildings']),
+  dirname
+)
