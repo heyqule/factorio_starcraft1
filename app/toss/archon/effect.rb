@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'archon-effect'
         @inner_path = 'bmps/toss/archon'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/archon'
         @add_border = false
         @use_17_rule = false
         @filename_digits = 2

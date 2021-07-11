@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'guardian-run'
         @inner_path = 'bmps/zerg/guardian'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/guardian'
         @add_border = true
         @filename_digits = 3
       end

@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 8
         @directions = 1
         @output_file = 'queen-death'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/queen'
         @inner_path = 'bmps/thingy/zerg_large_air_blood'
         @use_17_rule = false
         @use_flip = false

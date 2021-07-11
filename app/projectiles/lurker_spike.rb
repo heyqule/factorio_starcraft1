@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'lurker_spike'
         @inner_path = 'bmps/projectile/lurker_spike'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/projectiles'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

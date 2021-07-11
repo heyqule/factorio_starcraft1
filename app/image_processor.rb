@@ -11,6 +11,7 @@ module ScGraphicConverter
       add_borders
       colorize_mask
       remove_temp
+      move_to_final
     end
 
     def stack_images
@@ -44,9 +45,9 @@ module ScGraphicConverter
           convert << '('
           convert << '+clone'
           convert << '-channel' << 'A'
-          #onvert << '-morphology'  << 'Dilate' << 'Diamond'
-          #convert << '-morphology'  << 'Dilate' << 'Disk'
-          convert << '-morphology'  << 'Dilate' << 'Octagon'
+          #convert << '-morphology'  << 'Dilate' << 'Diamond'
+          #convert << '-morphology'  << 'Dilate' << 'Disk:1'
+          convert << '-morphology'  << 'Dilate' << 'Octagon:1'
           convert << '+channel'
           convert << '+level-colors' << 'black'
           convert << ')'
@@ -133,7 +134,13 @@ module ScGraphicConverter
       unless File.directory?(dirname)
         FileUtils.mkdir_p(dirname)
       end
+
       dirname = File.dirname(@image_properties.output_temp_file(1))
+      unless File.directory?(dirname)
+        FileUtils.mkdir_p(dirname)
+      end
+
+      dirname = File.dirname(@image_properties.final_output_file)
       unless File.directory?(dirname)
         FileUtils.mkdir_p(dirname)
       end
@@ -150,6 +157,10 @@ module ScGraphicConverter
 
     def remove_temp
       FileUtils.rm_rf(@image_properties.output_temp_folder)
+    end
+
+    def move_to_final
+      FileUtils.cp(@image_properties.output_file, @image_properties.final_output_file)
     end
   end
 end

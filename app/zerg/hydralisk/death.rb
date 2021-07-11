@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'hydralisk-death'
         @inner_path = 'bmps/zerg/hydralisk'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/hydralisk'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

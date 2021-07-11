@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 9
         @directions = 16
         @output_file = 'ultralisk-run'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/ultralisk'
         @inner_path = 'bmps/zerg/ultralisk'
         @add_border = true
         @filename_digits = 3

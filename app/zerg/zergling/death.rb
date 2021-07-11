@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 7
         @directions = 1
         @output_file = 'zergling-death'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/zergling'
         @inner_path = 'bmps/zerg/zergling'
         @use_17_rule = false
         @use_flip = false

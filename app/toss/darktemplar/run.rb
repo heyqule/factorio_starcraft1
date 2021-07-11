@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'darktemplar-run'
         @inner_path = 'bmps/toss/darktemplar'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/darktemplar'
         @add_border = true
         @filename_digits = 3
       end

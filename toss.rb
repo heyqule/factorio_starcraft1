@@ -4,14 +4,14 @@ require './autoloader'
 
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Arbiter::Run.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Arbiter::Effect.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Arbiter::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Run.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Run.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Effect.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Interceptor::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Run.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Effect.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Probe::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Templar::Run.new).perform
@@ -30,13 +30,13 @@ convert_unit('Dragoon')
 
 
 # Effects
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Toss::AirDeath.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonBall.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonHit.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
-# ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Toss::AirDeath.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonBall.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
 #
 #
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::ArbiterTribunal.new).perform
@@ -55,3 +55,31 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Gateway.new
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossBuildingDeath.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossLargeRubble.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossSmallRubble.new).perform
+
+#Copy Building Masks
+puts 'Copying Building Masks'
+FileUtils.copy_entry(
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/protoss/buildings']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/buildings'])
+)
+
+#Copy Units Effects
+puts 'Copying Units Effects'
+['arbiter', 'carrier', 'corsair', 'scout', 'archon'].each do |file|
+  FileUtils.cp(
+    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"bmps/custom_pngs/protoss/unit_effects/#{file}-effect.png"]),
+    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/units/#{file}/#{file}-effect.png"])
+  )
+end
+
+puts 'Copying Icons'
+dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/icons']);
+unless File.directory?(dirname)
+  FileUtils.mkdir_p(dirname)
+end
+
+
+FileUtils.copy_entry(
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/protoss/icons']),
+  dirname
+)

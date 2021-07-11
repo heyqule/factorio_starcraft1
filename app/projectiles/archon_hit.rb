@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'archon-hit-effect'
         @inner_path = 'bmps/thingy/archon_attack'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/projectiles/archon_attack'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'defiler_blood'
         @inner_path = 'bmps/thingy/defiler_blood'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/projectiles'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

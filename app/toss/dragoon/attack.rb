@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'dragoon-attack'
         @inner_path = 'bmps/toss/dragoon'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/dragoon'
         @add_border = true
         @filename_digits = 3
       end

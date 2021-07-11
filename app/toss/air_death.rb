@@ -9,8 +9,9 @@ module ScGraphicConverter
         @image_postfix = '.bmp'
         @frame_count = 15
         @directions = 1
-        @output_file = 'air_death'
+        @output_file = 'air-death'
         @inner_path = 'bmps/toss/air_death'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/air-death'
         @add_border = false
         @filename_digits = 2
         @use_flip = false

@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'templar-attack'
         @inner_path = 'bmps/toss/templar'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/templar'
         @add_border = true
         @filename_digits = 3
       end

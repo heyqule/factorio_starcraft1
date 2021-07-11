@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'defiler-run'
         @inner_path = 'bmps/zerg/defiler'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/defiler'
         @add_border = true
         @filename_digits = 3
       end

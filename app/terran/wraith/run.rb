@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'wraith-run'
         @inner_path = 'bmps/terran/wraith'
+        @final_path = 'bmps/final/erm_terran/graphics/entity/units/wraith'
         @add_border = true
         @filename_digits = 2
       end

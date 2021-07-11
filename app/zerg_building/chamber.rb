@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 3
         @directions = 1
         @output_file = 'chamber'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/chamber'
         @inner_path = 'bmps/zerg_building/chamber'
         @use_17_rule = false
         @use_flip = false

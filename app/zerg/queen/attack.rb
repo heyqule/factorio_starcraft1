@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 6
         @directions = 16
         @output_file = 'queen-attack'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/queen'
         @inner_path = 'bmps/zerg/queen'
         @add_border = true
         @filename_digits = 3

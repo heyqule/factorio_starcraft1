@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'guardian-death'
         @inner_path = 'bmps/thingy/zerg_large_air_blood'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/guardian'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

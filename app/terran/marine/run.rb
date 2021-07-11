@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'marine-run'
         @inner_path = 'bmps/terran/marine'
+        @final_path = 'bmps/final/erm_terran/graphics/entity/units/marine'
         @add_border = true
         @filename_digits = 3
       end

@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'hydra_split'
         @inner_path = 'bmps/thingy/hydra_split'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/projectiles'
         @use_17_rule = true
         @use_flip = true
         @add_border = false

@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'psystorm'
         @inner_path = 'bmps/thingy/psystorm'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/projectiles/psystorm'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 4
         @directions = 1
         @output_file = 'greater_spire'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/greater_spire'
         @inner_path = 'bmps/zerg_building/greater_spire'
         @use_17_rule = false
         @use_flip = false

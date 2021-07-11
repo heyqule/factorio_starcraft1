@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 10
         @directions = 1
         @output_file = 'ultralisk-death'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/ultralisk'
         @inner_path = 'bmps/zerg/ultralisk'
         @use_17_rule = false
         @use_flip = false

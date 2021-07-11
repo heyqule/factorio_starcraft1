@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'carrier-effect'
         @inner_path = 'bmps/toss/carrier'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/carrier'
         @add_border = false
         @filename_digits = 2
       end

@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 5
         @directions = 1
         @output_file = 'lair'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/lair'
         @inner_path = 'bmps/zerg_building/lair'
         @use_17_rule = false
         @use_flip = false

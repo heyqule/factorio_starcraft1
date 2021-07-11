@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'hydralisk-run'
         @inner_path = 'bmps/zerg/hydralisk'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/hydralisk'
         @add_border = true
         @filename_digits = 3
       end

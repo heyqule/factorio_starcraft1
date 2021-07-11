@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 5
         @directions = 1
         @output_file = 'hive'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/hive'
         @inner_path = 'bmps/zerg_building/hive'
         @use_17_rule = false
         @use_flip = false

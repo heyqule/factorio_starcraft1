@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'scout-effect'
         @inner_path = 'bmps/toss/scout'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/scout'
         @add_border = false
         @filename_digits = 2
       end

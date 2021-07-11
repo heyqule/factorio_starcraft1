@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'defiler-death'
         @inner_path = 'bmps/zerg/defiler'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/defiler'
         @use_17_rule = true
         @use_flip = false
         @add_border = false

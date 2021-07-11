@@ -10,6 +10,7 @@ module ScGraphicConverter
         @frame_count = 5
         @directions = 16
         @output_file = 'zergling-attack'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/zergling'
         @inner_path = 'bmps/zerg/zergling'
         @add_border = true
         @filename_digits = 3

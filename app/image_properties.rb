@@ -6,16 +6,17 @@ module ScGraphicConverter
     def initialize
       @frame_start = 0
       @frame_end = 84
-      @image_prefix = 'example';
+      @inner_path = 'path/to/inner/folder'
+      @image_prefix = 'example'
       @image_postfix = '.bmp'
       @size = 128
       @frame_count = 5
       @directions = 16
+      @final_path = 'path/to/final/folder'
       @output_file = 'example-run'
       @bypass_even_row = true #this could be GRP decoder problem, most grp file have 2 rows of same animations.
       @use_flip = true #to generate 16 directions when sc1 data only provides half of the directions.
       @use_17_rule = true #for SC1's 17 frames animation jump
-      @inner_path = 'path/to/inner/folder'
       @shift = [0, 0] #don't think it's working yet
       @add_border = true #add black border around the entity
       @colorize_mask = false #colorize image to red to use as mask
@@ -36,6 +37,10 @@ module ScGraphicConverter
 
     def output_file
       File.join(Configs::INPUT_FOLDER, 'generator',@inner_path,"#{@output_file}.png")
+    end
+
+    def final_output_file
+      File.join(Configs::INPUT_FOLDER, 'generator',@final_path,"#{@output_file}.png")
     end
 
     def input_file(frame)

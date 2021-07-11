@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'zealot-run'
         @inner_path = 'bmps/toss/zealot'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/zealot'
         @add_border = true
         @filename_digits = 3
       end

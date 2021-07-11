@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'marine-death'
         @inner_path = 'bmps/terran/marine'
+        @final_path = 'bmps/final/erm_terran/graphics/entity/units/marine'
         @use_17_rule = false
         @use_flip = false
         @add_border = false

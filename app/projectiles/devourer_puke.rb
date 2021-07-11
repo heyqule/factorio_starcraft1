@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'devourer_puke'
         @inner_path = 'bmps/thingy/devourer_puke'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/projectiles'
         @filename_digits = 2
       end
     end

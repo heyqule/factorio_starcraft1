@@ -11,6 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'lurker-death'
         @inner_path = 'bmps/zerg/lurker'
+        @final_path = 'bmps/final/erm_zerg/graphics/entity/units/lurker'
         @use_17_rule = false
         @use_flip = false
         @add_border = false
