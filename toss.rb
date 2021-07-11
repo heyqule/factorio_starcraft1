@@ -33,7 +33,7 @@ convert_unit('Dragoon')
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Toss::AirDeath.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonBall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonHit.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
@@ -71,6 +71,11 @@ puts 'Copying Units Effects'
     File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/units/#{file}/#{file}-effect.png"])
   )
 end
+
+FileUtils.cp(
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"bmps/custom_pngs/protoss/projectiles/stasis.png"]),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/projectiles/stasis.png"])
+)
 
 puts 'Copying Icons'
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/icons']);
