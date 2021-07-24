@@ -25,6 +25,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Run.new).perf
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Archon::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Effect.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Shuttle::Run.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Shuttle::Effect.new).perform
 convert_unit('Zealot')
 convert_unit('Dragoon')
 
@@ -65,7 +67,7 @@ FileUtils.copy_entry(
 
 #Copy Units Effects
 puts 'Copying Units Effects'
-['arbiter', 'carrier', 'corsair', 'scout', 'archon'].each do |file|
+['arbiter', 'carrier', 'corsair', 'scout', 'archon','shuttle'].each do |file|
   FileUtils.cp(
     File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"bmps/custom_pngs/protoss/unit_effects/#{file}-effect.png"]),
     File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/units/#{file}/#{file}-effect.png"])
