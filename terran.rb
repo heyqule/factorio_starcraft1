@@ -7,6 +7,7 @@ convert_unit('Marine')
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Projectile.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Laser_Projectile.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Wraith::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Wraith::Effect.new).perform
