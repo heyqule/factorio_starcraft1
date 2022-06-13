@@ -30,11 +30,15 @@ module ScGraphicConverter
     end
 
     def process_transparency
-      MiniMagick::Tool::Convert.new do |convert|
-        convert << @image_properties.output_temp_file('merged')
-        convert << '-black-threshold' << '0%'
-        convert << '-transparent' << 'black'
-        convert << @image_properties.output_file
+      if @image_properties.ignore_transparency == false
+        MiniMagick::Tool::Convert.new do |convert|
+          convert << @image_properties.output_temp_file('merged')
+          convert << '-black-threshold' << '0%'
+          convert << '-transparent' << 'black'
+          convert << @image_properties.output_file
+        end
+      else
+        FileUtils.cp(@image_properties.output_temp_file('merged'), @image_properties.output_file)
       end
     end
 
@@ -71,7 +75,13 @@ module ScGraphicConverter
     end
 
     def process_original_stack(flip = false)
-      for i in 0..(@image_properties.directions)
+      directions = @image_properties.directions
+      if @image_properties.sc2_hd
+        directions = directions - 1
+      end
+
+
+      for i in 0..(directions)
         next if @image_properties.bypass_even_row && i%2 == 1
         next if flip && (i == 0)
         next if flip && (i == @image_properties.directions && @image_properties.directions > 1)
@@ -160,6 +170,8 @@ module ScGraphicConverter
     end
 
     def move_to_final
+      puts @image_properties.output_file
+      puts @image_properties.final_output_file
       FileUtils.cp(@image_properties.output_file, @image_properties.final_output_file)
     end
   end

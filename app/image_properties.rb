@@ -2,7 +2,7 @@ module ScGraphicConverter
   class ImageProperties
     attr_reader :frame_start, :frame_end, :image_prefix, :image_postfix, :frame_count, :directions,
                 :bypass_even_row, :use_flip, :size, :use_17_rule, :shift, :add_border, :filename_digits,
-                :colorize_mask
+                :colorize_mask, :ignore_transparency, :sc2_hd
     def initialize
       @frame_start = 0
       @frame_end = 84
@@ -20,6 +20,8 @@ module ScGraphicConverter
       @shift = [0, 0] #don't think it's working yet
       @add_border = true #add black border around the entity
       @colorize_mask = false #colorize image to red to use as mask
+      @ignore_transparency = false
+      @sc2_hd = false
       @filename_digits = 0 #how many digit in filename sequence.  e.g set this to 3 when it's "zerg 001.bpm"
 
       #The following only apply to single direction, the image must be in the inner_path

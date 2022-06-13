@@ -2,8 +2,10 @@ require 'mini_magick'
 require 'fileutils'
 require './autoloader'
 
-convert_unit('Marine')
+#convert_unit('Marine')
 
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::HD_Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::HD2_Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::Projectile.new).perform
