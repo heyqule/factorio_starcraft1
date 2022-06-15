@@ -2,7 +2,8 @@ module ScGraphicConverter
   class ImageProperties
     attr_reader :frame_start, :frame_end, :image_prefix, :image_postfix, :frame_count, :directions,
                 :bypass_even_row, :use_flip, :size, :use_17_rule, :shift, :add_border, :filename_digits,
-                :colorize_mask, :ignore_transparency, :sc2_hd
+                :colorize_mask, :ignore_transparency, :sc2_hd, :sc2_render, :sc2_render_type, :sc2_frame_sequence
+
     def initialize
       @frame_start = 0
       @frame_end = 84
@@ -22,8 +23,14 @@ module ScGraphicConverter
       @colorize_mask = false #colorize image to red to use as mask
       @ignore_transparency = false
       @sc2_hd = false
+      @sc2_render = false
+      #00 - 15 are 16 directions, follows the following DIR structure
+      #unit/attack00/unitanimation00.png
+      #...
+      #unit/attack15/unitanimation07.png
+      @sc2_render_type = 'Run' #animation type for folder structure, Run, Attack, Death
+      @sc2_frame_sequence = nil
       @filename_digits = 0 #how many digit in filename sequence.  e.g set this to 3 when it's "zerg 001.bpm"
-
       #The following only apply to single direction, the image must be in the inner_path
       @start_with_image = nil
       @end_with_image = nil
@@ -47,6 +54,10 @@ module ScGraphicConverter
 
     def input_file(frame)
       File.join([Configs::INPUT_FOLDER, @inner_path, "#{image_prefix} #{frame}#{image_postfix}"])
+    end
+
+    def sc2_input_file(direction, frame)
+      File.join([Configs::INPUT_FOLDER, @inner_path, "#{sc2_render_type}#{direction}/#{image_prefix}#{frame}#{image_postfix}"])
     end
 
     def start_with_image

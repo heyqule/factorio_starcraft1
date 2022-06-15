@@ -5,13 +5,22 @@ module ScGraphicConverter
     end
 
     def perform
-      check_output_file
-      stack_images
-      process_transparency
-      add_borders
-      colorize_mask
-      remove_temp
-      move_to_final
+      if @image_properties.sc2_render then
+        remove_temp
+        check_output_file
+        stack_sc2_images
+        remove_temp
+        move_to_final
+      else
+        remove_temp
+        check_output_file
+        stack_images
+        process_transparency
+        add_borders
+        colorize_mask
+        remove_temp
+        move_to_final
+      end
     end
 
     def stack_images
@@ -27,6 +36,19 @@ module ScGraphicConverter
         @vertical_convert << '-append'
         @vertical_convert << @image_properties.output_temp_file('merged')
       end
+    end
+
+    def stack_sc2_images
+      MiniMagick::Tool::Convert.new do |vertical_convert|
+        @vertical_convert = vertical_convert
+
+        process_sc2_stack
+
+        @vertical_convert << '-append'
+        @vertical_convert << @image_properties.output_temp_file('merged')
+      end
+
+      FileUtils.cp(@image_properties.output_temp_file('merged'), @image_properties.output_file)
     end
 
     def process_transparency
@@ -80,7 +102,6 @@ module ScGraphicConverter
         directions = directions - 1
       end
 
-
       for i in 0..(directions)
         next if @image_properties.bypass_even_row && i%2 == 1
         next if flip && (i == 0)
@@ -94,14 +115,14 @@ module ScGraphicConverter
           end
 
           for j in 0..(@image_properties.frame_count-1)
-            puts "processing flip:#{@image_properties.use_flip}, #{i} #{j}, +#{j * @image_properties.size}+#{i * @image_properties.size}"
             source_image = @image_properties.input_file(calculate_frame(i, j))
-            puts source_image
 
             if flip && (i > 0 && i < @image_properties.directions)
               source_image = @image_properties.input_file(calculate_frame(@image_properties.directions-i, j))
-              puts source_image
             end
+
+            puts "processing flip:#{@image_properties.use_flip}, #{i} #{j}, +#{j * @image_properties.size}+#{i * @image_properties.size}"
+            puts source_image
 
             if @image_properties.shift[0] != 0 || @image_properties.shift[1] != 0
               convert << "-page" << "#{get_shift_position(@image_properties.shift[0])}#{get_shift_position(@image_properties.shift[1])}"
@@ -125,6 +146,35 @@ module ScGraphicConverter
 
         @vertical_convert.stack do |v_stack|
           v_stack << @image_properties.output_temp_file(get_temp_file(i, flip))
+        end
+      end
+    end
+
+    def process_sc2_stack
+      directions = @image_properties.directions - 1
+      for i in 0..(directions)
+        direction_number = i
+        direction_number = direction_number.to_s.rjust(2, "0")
+        MiniMagick::Tool::Convert.new do |convert|
+          for j in 0..(@image_properties.frame_count-1)
+            frame_number = j
+            if !@image_properties.sc2_frame_sequence.nil? && @image_properties.sc2_frame_sequence[j] then
+              frame_number = @image_properties.sc2_frame_sequence[j]
+            end
+            frame_number = frame_number.to_s.rjust(@image_properties.filename_digits, "0")
+            source_image = @image_properties.sc2_input_file(direction_number, frame_number)
+            puts "processing HD from #{source_image}"
+
+            convert.stack do |stack|
+              stack << source_image
+            end
+          end
+          convert << '+append'
+          convert << @image_properties.output_temp_file(get_temp_file(i, false))
+        end
+
+        @vertical_convert.stack do |v_stack|
+          v_stack << @image_properties.output_temp_file(get_temp_file(i, false))
         end
       end
     end
@@ -170,8 +220,6 @@ module ScGraphicConverter
     end
 
     def move_to_final
-      puts @image_properties.output_file
-      puts @image_properties.final_output_file
       FileUtils.cp(@image_properties.output_file, @image_properties.final_output_file)
     end
   end
