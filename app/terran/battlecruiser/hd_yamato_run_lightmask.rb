@@ -1,18 +1,19 @@
 module ScGraphicConverter
   module BattleCruiser
-    class HD_Run < ScGraphicConverter::ImageProperties
+    class HD_Yamato_Run_Lightmask < ScGraphicConverter::ImageProperties
       def initialize
         super
         @frame_start = 0
         @frame_end = 15
-        @image_prefix = 'battlecruiser'
+        @image_prefix = 'Run'
         @image_postfix = '.png'
         @frame_count = 1
         @directions = 16
         @size = 500
-        @output_file = 'battlecruiser-run'
-        @inner_path = 'bmps/terran/battlecruiser_v1_hd'
-        @final_path = 'bmps/final/erm_terran_hd/graphics/entity/units/battlecruiser_v1_hd'
+        @output_file = 'battlecruiser-run-lightmask'
+        @output_file_no_space = true
+        @inner_path = 'bmps/terran/battlecruiser_yamato_hd/Light'
+        @final_path = 'bmps/final/erm_terran_hd/graphics/entity/units/battlecruiser_yamato_hd'
         @add_border = false
         @use_17_rule = true
         @use_flip = false

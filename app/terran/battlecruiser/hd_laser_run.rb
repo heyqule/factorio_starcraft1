@@ -1,18 +1,19 @@
 module ScGraphicConverter
   module BattleCruiser
-    class HD2_Run < ScGraphicConverter::ImageProperties
+    class HD_Laser_Run < ScGraphicConverter::ImageProperties
       def initialize
         super
         @frame_start = 0
         @frame_end = 15
-        @image_prefix = 'battlecruiser'
+        @image_prefix = 'Run'
         @image_postfix = '.png'
         @frame_count = 1
         @directions = 16
         @size = 500
         @output_file = 'battlecruiser-run'
-        @inner_path = 'bmps/terran/battlecruiser_v2_hd'
-        @final_path = 'bmps/final/erm_terran_hd/graphics/entity/units/battlecruiser_v2_hd'
+        @output_file_no_space = true
+        @inner_path = 'bmps/terran/battlecruiser_laser_hd/Texture'
+        @final_path = 'bmps/final/erm_terran_hd/graphics/entity/units/battlecruiser_laser_hd'
         @add_border = false
         @use_17_rule = true
         @use_flip = false

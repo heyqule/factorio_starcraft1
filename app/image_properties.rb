@@ -15,6 +15,7 @@ module ScGraphicConverter
       @directions = 16
       @final_path = 'path/to/final/folder'
       @output_file = 'example-run'
+      @output_file_no_space = false
       @bypass_even_row = true #this could be GRP decoder problem, most grp file have 2 rows of same animations.
       @use_flip = true #to generate 16 directions when sc1 data only provides half of the directions.
       @use_17_rule = true #for SC1's 17 frames animation jump
@@ -53,7 +54,11 @@ module ScGraphicConverter
     end
 
     def input_file(frame)
-      File.join([Configs::INPUT_FOLDER, @inner_path, "#{image_prefix} #{frame}#{image_postfix}"])
+      if @output_file_no_space
+        File.join([Configs::INPUT_FOLDER, @inner_path, "#{image_prefix}#{frame}#{image_postfix}"])
+      else
+        File.join([Configs::INPUT_FOLDER, @inner_path, "#{image_prefix} #{frame}#{image_postfix}"])
+      end
     end
 
     def sc2_input_file(direction, frame)
