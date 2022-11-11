@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/toss/templar'
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/templar'
         @add_border = true
-        @filename_digits = 3
+        
       end
     end
   end

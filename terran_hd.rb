@@ -9,4 +9,4 @@ require './autoloader'
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::HD_Yamato_Run.new).perform
 # ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::BattleCruiser::HD_Yamato_Run_Lightmask.new).perform
 
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::HD_Run.new).perform
+#ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::HD_Run.new).perform

@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/terran/wraith'
         @final_path = 'bmps/final/erm_terran/graphics/entity/units/wraith'
         @add_border = false
-        @filename_digits = 2
+
       end
     end
   end

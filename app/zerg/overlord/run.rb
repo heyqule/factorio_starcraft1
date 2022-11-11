@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/zerg/overlord'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/units/overlord'
         @add_border = true
-        @filename_digits = 2
+
       end
     end
   end

@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/toss/air_death'
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/air-death'
         @add_border = false
-        @filename_digits = 2
+
         @use_flip = false
         @use_17_rule = false
         @bypass_even_row = true

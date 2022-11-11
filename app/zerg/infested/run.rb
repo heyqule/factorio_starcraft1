@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/zerg/infested_terran'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/units/infested'
         @add_border = true
-        @filename_digits = 3
+        
       end
     end
   end

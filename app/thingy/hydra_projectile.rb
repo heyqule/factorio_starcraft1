@@ -15,7 +15,7 @@ module ScGraphicConverter
         @use_17_rule = true
         @use_flip = true
         @add_border = false
-        @filename_digits = 3
+        
       end
     end
   end

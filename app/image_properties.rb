@@ -31,7 +31,7 @@ module ScGraphicConverter
       #unit/attack15/unitanimation07.png
       @sc2_render_type = 'Run' #animation type for folder structure, Run, Attack, Death
       @sc2_frame_sequence = nil
-      @filename_digits = 0 #how many digit in filename sequence.  e.g set this to 3 when it's "zerg 001.bpm"
+      @filename_digits = 3
       #The following only apply to single direction, the image must be in the inner_path
       @start_with_image = nil
       @end_with_image = nil

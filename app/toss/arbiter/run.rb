@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/toss/arbiter'
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/arbiter'
         @add_border = true
-        @filename_digits = 2
+
       end
     end
   end

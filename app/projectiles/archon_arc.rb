@@ -12,7 +12,6 @@ module ScGraphicConverter
         @output_file = 'archon-attack'
         @inner_path = 'bmps/thingy/archon_attack'
         @final_path = 'bmps/final/erm_toss/graphics/entity/projectiles/archon_attack'
-        @filename_digits = 2
       end
     end
   end

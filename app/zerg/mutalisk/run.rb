@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/zerg/mutalisk'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/units/mutalisk'
         @add_border = true
-        @filename_digits = 2
+
       end
     end
   end

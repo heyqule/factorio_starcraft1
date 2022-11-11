@@ -13,7 +13,7 @@ module ScGraphicConverter
         @final_path = 'bmps/final/erm_zerg/graphics/entity/units/queen'
         @inner_path = 'bmps/zerg/queen'
         @add_border = true
-        @filename_digits = 3
+        
       end
     end
   end

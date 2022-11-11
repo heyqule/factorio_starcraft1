@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/terran/battlecruiser'
         @final_path = 'bmps/final/erm_terran/graphics/entity/units/battlecruiser'
         @add_border = true
-        @filename_digits = 2
+        
       end
     end
   end

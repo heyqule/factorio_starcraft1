@@ -14,7 +14,7 @@ module ScGraphicConverter
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/archon'
         @add_border = false
         @use_17_rule = false
-        @filename_digits = 2
+
       end
     end
   end

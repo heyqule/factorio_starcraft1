@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/toss/zealot'
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/zealot'
         @add_border = true
-        @filename_digits = 3
+        
       end
     end
   end

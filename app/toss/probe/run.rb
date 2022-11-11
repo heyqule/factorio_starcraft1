@@ -13,7 +13,7 @@ module ScGraphicConverter
         @inner_path = 'bmps/toss/probe'
         @final_path = 'bmps/final/erm_toss/graphics/entity/units/probe'
         @add_border = true
-        @filename_digits = 2
+
       end
     end
   end
