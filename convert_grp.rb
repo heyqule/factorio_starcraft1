@@ -1,6 +1,7 @@
 require './autoloader'
 require 'fileutils'
 require 'csv'
+require 'mini_magick'
 
 
 def run_command(row, type, color=nil)
@@ -24,6 +25,21 @@ def run_command(row, type, color=nil)
   exec = "#{execution} --grptobmps #{grp_file} --palette #{palette_file} #{destination}/#{row[0]}"
   puts exec
   %x(#{exec})
+
+  unless row[3].nil?
+    puts "Row[3] #{row[3]}"
+    count = `ls -1 #{destination} | wc -l`.to_i
+    for i in 0..count-1 do
+      numberpadded = i.to_s.rjust(3, "0")
+      MiniMagick::Tool::Convert.new do |resizer|
+        resizer << "#{destination}/#{row[0]} #{numberpadded}.bmp"
+        resizer << "-background" << "black"
+        resizer << "-gravity" << "center"
+        resizer << "-extent" << "#{row[3]}"
+        resizer << "#{destination}/#{row[0]} #{numberpadded}.bmp"
+      end
+    end
+  end
 end
 
 inputfile = ScGraphicConverter::Configs::INPUT_FOLDER
