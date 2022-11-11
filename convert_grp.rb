@@ -27,7 +27,7 @@ def run_command(row, type, color=nil)
   %x(#{exec})
 
   unless row[3].nil?
-    puts "Row[3] #{row[3]}"
+    puts "Extending frame to #{row[3]}"
     count = `ls -1 #{destination} | wc -l`.to_i
     for i in 0..count-1 do
       numberpadded = i.to_s.rjust(3, "0")

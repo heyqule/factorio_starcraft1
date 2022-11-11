@@ -2,7 +2,7 @@ scourge,avenger,Units-Yellow
 brood,brood,Units-Yellow
 infested_terran,bugguy,Units-Yellow
 chamber,cerebrat,Units-Yellow,128x128
-spawning_pool,chrysal,Units-Yellow
+spawning_pool,chrysal,Units-Yellow,128x128
 defiler,defiler,Units-Yellow
 devourer,devour,Units-Yellow
 drone,drone,Units-Yellow
@@ -18,7 +18,7 @@ greater_spire,mutacham,Units-Yellow
 mutalisk,mutalid,Units-Yellow
 queen,queen,Units-Yellow
 defiler_mound,mutapit,Units-Yellow
-queen_nest,nest,Units-Yellow
+queen_nest,nest,Units-Yellow,128x128
 nyduspit,nyduspit,Units-Yellow
 boss_1,over1,Units-Yellow
 boss_2,over2,Units-Yellow
@@ -40,7 +40,7 @@ guardian_death,zgudeath,Units-Yellow,140x140
 hydralisk_death,zhydeath,Units-Yellow
 infest_terran_death,zladeath,Units-Yellow
 mutalisk_death,zmudeath,Units-Yellow,80x80
-overlord_death,zovdeath,Units-Yellow,80x80
+overlord_death,zovdeath,Units-Yellow,140x140
 queen_death,zqudeath,Units-Yellow,140x140
 ultralisk_death,zuldeath,Units-Yellow
 zergling_death,zzedeath,Units-Yellow

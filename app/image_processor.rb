@@ -65,23 +65,21 @@ module ScGraphicConverter
     end
 
     def add_borders
-      if @image_properties.add_border
-        MiniMagick::Tool::Convert.new do |convert|
-          convert << @image_properties.output_file
-          convert << '('
-          convert << '+clone'
-          convert << '-channel' << 'A'
-          #convert << '-morphology'  << 'Dilate' << 'Diamond'
-          #convert << '-morphology'  << 'Dilate' << 'Disk:1'
-          convert << '-morphology'  << 'Dilate' << 'Octagon:1'
-          convert << '+channel'
-          convert << '+level-colors' << 'black'
-          convert << ')'
-          convert << '-compose' << 'DstOver'
-          convert << '-composite'
-          convert << @image_properties.output_file
-        end
-      end
+      # if @image_properties.add_border
+      #   MiniMagick::Tool::Convert.new do |convert|
+      #     convert << @image_properties.output_file
+      #     convert << '('
+      #     convert << '+clone'
+      #     convert << '-channel' << 'A'
+      #     convert << '-morphology'  << 'Dilate' << 'Octagon:1'
+      #     convert << '+channel'
+      #     convert << '+level-colors' << 'black'
+      #     convert << ')'
+      #     convert << '-compose' << 'DstOver'
+      #     convert << '-composite'
+      #     convert << @image_properties.output_file
+      #   end
+      # end
     end
 
     def colorize_mask
