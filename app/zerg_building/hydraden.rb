@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'hydraden'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/hydraden'
-        @inner_path = 'bmps/zerg_building/hydraden'
+        @inner_path = 'bmps/zerg/hydraden'
         @use_17_rule = false
         @use_flip = false
         @add_border = true

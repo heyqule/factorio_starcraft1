@@ -48,12 +48,12 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::UltralistCa
 
 puts "Copying Special Effects"
 FileUtils.cp(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/hydra_pr.png']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/hydra_pr.png']),
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/projectiles/hydra_pr.png'])
 )
 
 FileUtils.cp(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/queen_heal.png']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/queen_heal.png']),
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/projectiles/queen_heal.png'])
 )
 
@@ -64,12 +64,12 @@ unless File.directory?(dirname)
 end
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/icons']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/icons']),
   dirname
 )
 
 FileUtils.cp(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/lurker-burrow-combined.png']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/lurker-burrow-combined.png']),
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-burrow-combined.png'])
 )
 
@@ -80,6 +80,6 @@ unless File.directory?(dirname)
 end
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/zerg/buildings']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/buildings']),
   dirname
 )

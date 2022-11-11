@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'lair'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/lair'
-        @inner_path = 'bmps/zerg_building/lair'
+        @inner_path = 'bmps/zerg/lair'
         @use_17_rule = false
         @use_flip = false
         @add_border = true

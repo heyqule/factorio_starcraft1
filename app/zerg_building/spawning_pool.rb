@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'spawning_pool'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/spawning_pool'
-        @inner_path = 'bmps/zerg_building/spawning_pool'
+        @inner_path = 'bmps/zerg/spawning_pool'
         @use_17_rule = false
         @use_flip = false
         @add_border = true

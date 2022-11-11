@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'sunker_colony'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/buildings/sunker_colony'
-        @inner_path = 'bmps/zerg_building/sunker_colony'
+        @inner_path = 'bmps/zerg/sunker_colony'
         @use_17_rule = false
         @use_flip = false
         @add_border = true

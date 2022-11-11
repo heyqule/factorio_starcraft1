@@ -5,12 +5,12 @@ module ScGraphicConverter
         super
         @frame_start = 0
         @frame_end = 33
-        @image_prefix = 'wraith_glow'
+        @image_prefix = 'terran_wraith_exhaust'
         @image_postfix = '.bmp'
         @frame_count = 2
         @directions = 16
         @output_file = 'wraith-effect'
-        @inner_path = 'bmps/terran/wraith'
+        @inner_path = 'bmps/thingy/terran_wraith_exhaust'
         @final_path = 'bmps/final/erm_terran/graphics/entity/units/wraith'
         @add_border = false
 

@@ -10,7 +10,7 @@ module ScGraphicConverter
         @frame_count = 14
         @directions = 1
         @output_file = 'lurker-burrow'
-        @inner_path = 'bmps/zerg/lurker'
+        @inner_path = 'bmps/zerg/lurker_burrow'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/units/lurker'
         @add_border = true
         

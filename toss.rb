@@ -61,7 +61,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossSmallRubb
 #Copy Building Masks
 puts 'Copying Building Masks'
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/protoss/buildings']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/protoss/buildings']),
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/buildings'])
 )
 
@@ -69,7 +69,7 @@ FileUtils.copy_entry(
 puts 'Copying Units Effects'
 ['archon'].each do |file|
   FileUtils.cp(
-    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"bmps/custom_pngs/protoss/unit_effects/#{file}-effect.png"]),
+    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"custom_pngs/protoss/unit_effects/#{file}-effect.png"]),
     File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/units/#{file}/#{file}-effect.png"])
   )
 end
@@ -83,6 +83,6 @@ end
 
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/protoss/icons']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/protoss/icons']),
   dirname
 )

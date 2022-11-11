@@ -26,6 +26,12 @@ def run_command(row, type, color=nil)
   %x(#{exec})
 end
 
+inputfile = ScGraphicConverter::Configs::INPUT_FOLDER
+FileUtils.rm_rf("#{inputfile}bmps/thingy")
+FileUtils.rm_rf("#{inputfile}bmps/bullet")
+FileUtils.rm_rf("#{inputfile}bmps/terran")
+FileUtils.rm_rf("#{inputfile}bmps/protoss")
+FileUtils.rm_rf("#{inputfile}bmps/zerg")
 
 terran_table = CSV.read("grp_terran_mapping.csv")
 terran_table.each do |row|

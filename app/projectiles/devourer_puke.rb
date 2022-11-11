@@ -5,12 +5,12 @@ module ScGraphicConverter
         super
         @frame_start = 0
         @frame_end = 67
-        @image_prefix = 'devourer_puke';
+        @image_prefix = 'zerg_devourer_puke';
         @image_postfix = '.bmp'
         @frame_count = 4
         @directions = 16
         @output_file = 'devourer_puke'
-        @inner_path = 'bmps/thingy/devourer_puke'
+        @inner_path = 'bmps/thingy/zerg_devourer_puke'
         @final_path = 'bmps/final/erm_zerg/graphics/entity/projectiles'
       end
     end

@@ -21,7 +21,7 @@ unless File.directory?(dirname)
 end
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/terran/explosion']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/terran/explosion']),
   dirname
 )
 
@@ -32,7 +32,7 @@ unless File.directory?(dirname)
 end
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/terran/unit-effects']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/terran/unit-effects']),
   dirname
 )
 
@@ -43,7 +43,7 @@ unless File.directory?(dirname)
 end
 
 FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'bmps/custom_pngs/terran/icons']),
+  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/terran/icons']),
   dirname
 )
 

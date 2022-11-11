@@ -5,7 +5,7 @@ module ScGraphicConverter
         super
         @frame_start = 238
         @frame_end = 245
-        @image_prefix = 'infested';
+        @image_prefix = 'infested_terran';
         @image_postfix = '.bmp'
         @frame_count = 7
         @directions = 1
