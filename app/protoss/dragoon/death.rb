@@ -15,7 +15,7 @@ module ScGraphicConverter
         @use_17_rule = false
         @use_flip = false
         @add_border = false
-        @start_with_image = '../../protoss/dragoon_death/dragoon_death 000.bmp'
+        @end_with_image = '../../protoss/dragoon_death/dragoon_death 000.bmp'
       end
     end
   end
