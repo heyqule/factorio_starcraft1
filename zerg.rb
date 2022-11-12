@@ -68,18 +68,9 @@ FileUtils.copy_entry(
   dirname
 )
 
-FileUtils.cp(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/lurker-burrow-combined.png']),
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-burrow-combined.png'])
-)
-
-puts "Copying Fillers"
-dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/buildings']);
-unless File.directory?(dirname)
-  FileUtils.mkdir_p(dirname)
+MiniMagick::Tool::Convert.new do |convert|
+  convert << '+append'
+  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-burrow.png"])
+  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-unburrow.png"])
+  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/units/lurker/lurker-burrow-combined.png'])
 end
-
-FileUtils.copy_entry(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/buildings']),
-  dirname
-)
