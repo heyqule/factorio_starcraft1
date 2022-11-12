@@ -10,7 +10,7 @@ module ScGraphicConverter
         @frame_count = 15
         @directions = 1
         @output_file = 'building_explode'
-        @inner_path = 'bmps/toss_building'
+        @inner_path = 'bmps/protoss/building_death'
         @final_path = 'bmps/final/erm_toss/graphics/entity/buildings'
         @use_17_rule = false
         @use_flip = false

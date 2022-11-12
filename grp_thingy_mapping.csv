@@ -26,12 +26,12 @@ protoss_mindcontrol,PdaMyoLg,z-ofire-edit-vga
 protoss_halt_movement,PdaParLg,z-ofire-edit-vga
 protoss_photon_hit,phohit,Units-Yellow
 protoss_air_death,pexplode,Units-Yellow
-protoss_psistorm,pstorm,Units-Yellow
-protoss_raven_explosion,zbgexplo,Units-Yellow
+protoss_psistorm,psistorm,Units-Yellow
+protoss_raven_explosion,zbgexplo,z-bfire-edit-vga
 protoss_rubble_l,prubblel,Units-Yellow
 protoss_rubble_s,prubbles,Units-Yellow
 zerg_rubble_l,zrubblel,Units-Yellow
-zerg_rubble_s,zrubblel,Units-Yellow
+zerg_rubble_s,zrubbles,Units-Yellow
 zerg_devourer_puke,zdvPuke,Units-Yellow
 zerg_devourer_hit,zdvHit,Units-Yellow
 zerg_devourer_goo,zdvGooL,Units-Yellow
