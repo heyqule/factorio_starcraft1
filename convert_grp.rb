@@ -43,33 +43,32 @@ def run_command(row, type, color=nil)
 end
 
 inputfile = ScGraphicConverter::Configs::INPUT_FOLDER
-FileUtils.rm_rf("#{inputfile}bmps/thingy")
-FileUtils.rm_rf("#{inputfile}bmps/bullet")
 FileUtils.rm_rf("#{inputfile}bmps/terran")
-FileUtils.rm_rf("#{inputfile}bmps/protoss")
-FileUtils.rm_rf("#{inputfile}bmps/zerg")
-
 terran_table = CSV.read("grp_terran_mapping.csv")
 terran_table.each do |row|
   run_command(row, 'terran')
 end
-
-thingy_table = CSV.read("grp_thingy_mapping.csv")
-thingy_table.each do |row|
-  run_command(row, 'thingy')
-end
-
-bullet_table = CSV.read("grp_bullet_mapping.csv")
-bullet_table.each do |row|
-  run_command(row, 'bullet')
-end
-
-terran_table = CSV.read("grp_protoss_mapping.csv")
-terran_table.each do |row|
-  run_command(row, 'protoss', 'teal')
-end
-
-terran_table = CSV.read("grp_zerg_mapping.csv")
-terran_table.each do |row|
-  run_command(row, 'zerg', 'orange')
-end
+#
+# FileUtils.rm_rf("#{inputfile}bmps/thingy")
+# thingy_table = CSV.read("grp_thingy_mapping.csv")
+# thingy_table.each do |row|
+#   run_command(row, 'thingy')
+# end
+#
+# FileUtils.rm_rf("#{inputfile}bmps/bullet")
+# bullet_table = CSV.read("grp_bullet_mapping.csv")
+# bullet_table.each do |row|
+#   run_command(row, 'bullet')
+# end
+#
+# FileUtils.rm_rf("#{inputfile}bmps/protoss")
+# protoss_table = CSV.read("grp_protoss_mapping.csv")
+# protoss_table.each do |row|
+#   run_command(row, 'protoss', 'teal')
+# end
+#
+# FileUtils.rm_rf("#{inputfile}bmps/zerg")
+# zerg_table = CSV.read("grp_zerg_mapping.csv")
+# zerg_table.each do |row|
+#   run_command(row, 'zerg', 'red')
+# end

@@ -14,6 +14,11 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Wraith::Effect.new).p
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::Run.new).perform
 
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranCC.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranBarrack.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranFactory.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranStarport.new).perform
+
 puts "Copying Explosions"
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_terran/graphics/entity/explosion']);
 unless File.directory?(dirname)
