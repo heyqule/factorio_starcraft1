@@ -43,17 +43,18 @@ def run_command(row, type, color=nil)
 end
 
 inputfile = ScGraphicConverter::Configs::INPUT_FOLDER
-FileUtils.rm_rf("#{inputfile}bmps/terran")
-terran_table = CSV.read("grp_terran_mapping.csv")
-terran_table.each do |row|
-  run_command(row, 'terran')
-end
-#
-# FileUtils.rm_rf("#{inputfile}bmps/thingy")
-# thingy_table = CSV.read("grp_thingy_mapping.csv")
-# thingy_table.each do |row|
-#   run_command(row, 'thingy')
+
+# FileUtils.rm_rf("#{inputfile}bmps/terran")
+# terran_table = CSV.read("grp_terran_mapping.csv")
+# terran_table.each do |row|
+#   run_command(row, 'terran')
 # end
+#
+FileUtils.rm_rf("#{inputfile}bmps/thingy")
+thingy_table = CSV.read("grp_thingy_mapping.csv")
+thingy_table.each do |row|
+  run_command(row, 'thingy')
+end
 #
 # FileUtils.rm_rf("#{inputfile}bmps/bullet")
 # bullet_table = CSV.read("grp_bullet_mapping.csv")
