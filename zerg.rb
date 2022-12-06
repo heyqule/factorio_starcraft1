@@ -54,11 +54,6 @@ FileUtils.cp(
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/projectiles/hydra_pr.png'])
 )
 
-FileUtils.cp(
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'custom_pngs/zerg/queen_heal.png']),
-  File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/projectiles/queen_heal.png'])
-)
-
 puts "Copying Icons"
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_zerg/graphics/entity/icons']);
 unless File.directory?(dirname)
