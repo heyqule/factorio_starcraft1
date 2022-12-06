@@ -24,8 +24,11 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Goliath::RunBottom.ne
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranCC.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranBarrack.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranBarrackWorking.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranFactory.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranFactoryWorking.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranStarport.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TerranStarportWorking.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranXLargeExplosion.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranLargeExplosion.new).perform
