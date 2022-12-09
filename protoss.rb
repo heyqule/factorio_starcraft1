@@ -39,6 +39,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.n
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Recall.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Disrupt.new).perform
 #
 #
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::ArbiterTribunal.new).perform
@@ -53,6 +55,9 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Pylon.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Stargate.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TemplarArchive.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Gateway.new).perform
+
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Warpgate.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Warpgate_Animation.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossBuildingDeath.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossLargeRubble.new).perform

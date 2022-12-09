@@ -5,15 +5,15 @@ require './autoloader'
 convert_unit('Zergling')
 convert_unit('Hydralisk')
 convert_unit('Ultralisk')
-convert_unit('Mutalisk', attack: false, attack_mask:false)
+convert_unit('Mutalisk')
 convert_unit('Devourer')
-convert_unit('Guardian', attack: false, attack_mask:false)
-convert_unit('Overlord', attack: false, attack_mask:false)
-convert_unit('Drone', attack: false, attack_mask:false)
+convert_unit('Guardian', true, false, false)
+convert_unit('Overlord', true, false, false)
+convert_unit('Drone', true, false, false)
 convert_lurker
 convert_unit('Queen')
-convert_unit('Defiler', attack: false, attack_mask:false)
-convert_unit('Infested', attack: false, attack_mask:false)
+convert_unit('Defiler', true, false, false)
+convert_unit('Infested', true, false, false)
 
 # Particles
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::SporesA.new).perform
@@ -47,6 +47,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Spore.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunker.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkerAttack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::UltralistCavern.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Overmind.new).perform
 
 puts "Copying Special Effects"
 FileUtils.cp(
