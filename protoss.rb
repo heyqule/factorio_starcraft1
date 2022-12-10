@@ -35,6 +35,7 @@ convert_unit('Dragoon')
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Toss::AirDeath.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonBall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DragoonHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossBall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
