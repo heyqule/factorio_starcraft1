@@ -40,6 +40,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Stasis.n
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossCorsairSplash.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Recall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Disrupt.new).perform
 #
