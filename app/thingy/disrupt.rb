@@ -9,7 +9,7 @@ module ScGraphicConverter
         @image_postfix = '.bmp'
         @frame_count = 11
         @directions = 1
-        @output_file = 'distrupt'
+        @output_file = 'disrupt'
         @inner_path = 'bmps/thingy/protoss_disrupt'
         @final_path = 'bmps/final/erm_toss/graphics/entity/projectiles'
         @use_17_rule = false
