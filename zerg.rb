@@ -2,6 +2,7 @@ require 'mini_magick'
 require 'fileutils'
 require './autoloader'
 
+convert_unit('Broodling')
 convert_unit('Zergling')
 convert_unit('Hydralisk')
 convert_unit('Ultralisk')
@@ -14,6 +15,7 @@ convert_lurker
 convert_unit('Queen')
 convert_unit('Defiler', true, false, false)
 convert_unit('Infested', true, false, false)
+convert_unit('Scourge', true, true, false)
 
 # Particles
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::SporesA.new).perform
@@ -48,6 +50,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunker.new)
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkerAttack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::UltralistCavern.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Overmind.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Infested_Cmd.new).perform
 
 puts "Copying Special Effects"
 FileUtils.cp(

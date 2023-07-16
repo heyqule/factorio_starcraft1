@@ -56,20 +56,20 @@ thingy_table.each do |row|
   run_command(row, 'thingy')
 end
 
-# FileUtils.rm_rf("#{inputfile}bmps/bullet")
-# bullet_table = CSV.read("grp_bullet_mapping.csv")
-# bullet_table.each do |row|
-#   run_command(row, 'bullet')
-# end
-#
-# FileUtils.rm_rf("#{inputfile}bmps/protoss")
-# protoss_table = CSV.read("grp_protoss_mapping.csv")
-# protoss_table.each do |row|
-#   run_command(row, 'protoss', 'teal')
-# end
-#
-# FileUtils.rm_rf("#{inputfile}bmps/zerg")
-# zerg_table = CSV.read("grp_zerg_mapping.csv")
-# zerg_table.each do |row|
-#   run_command(row, 'zerg', 'red')
-# end
+FileUtils.rm_rf("#{inputfile}bmps/bullet")
+bullet_table = CSV.read("grp_bullet_mapping.csv")
+bullet_table.each do |row|
+  run_command(row, 'bullet')
+end
+
+FileUtils.rm_rf("#{inputfile}bmps/protoss")
+protoss_table = CSV.read("grp_protoss_mapping.csv")
+protoss_table.each do |row|
+  run_command(row, 'protoss', 'teal')
+end
+
+FileUtils.rm_rf("#{inputfile}bmps/zerg")
+zerg_table = CSV.read("grp_zerg_mapping.csv")
+zerg_table.each do |row|
+  run_command(row, 'zerg', 'red')
+end
