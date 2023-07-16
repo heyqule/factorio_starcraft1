@@ -45,3 +45,4 @@ overlord_death,zovdeath,Units-Orange,140x140
 queen_death,zqudeath,Units-Orange,140x140
 ultralisk_death,zuldeath,Units-Orange
 zergling_death,zzedeath,Units-Orange
+zerg_build,zbuild,Units-Orange

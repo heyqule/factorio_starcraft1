@@ -10,7 +10,7 @@ convert_unit('Mutalisk')
 convert_unit('Devourer')
 convert_unit('Guardian', true, false, false)
 convert_unit('Overlord', true, false, false)
-convert_unit('Drone', true, false, false)
+convert_unit('Drone', true, true, false)
 convert_lurker
 convert_unit('Queen')
 convert_unit('Defiler', true, false, false)
