@@ -10,6 +10,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Carrier::Effect.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scout::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Interceptor::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Interceptor::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Attack.new).perform
