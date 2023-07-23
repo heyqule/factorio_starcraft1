@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 1
         @output_file = 'darkarchon-effect'
         @inner_path = 'bmps/protoss/darchn'
-        @final_path = 'bmps/final/erm_toss/graphics/entity/units/dark_archon'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/darkarchon'
         @add_border = false
         @use_17_rule = false
 

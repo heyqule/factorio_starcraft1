@@ -11,7 +11,7 @@ module ScGraphicConverter
         @directions = 16
         @output_file = 'darkarchon-run'
         @inner_path = 'bmps/protoss/darchnT'
-        @final_path = 'bmps/final/erm_toss/graphics/entity/units/dark_archon'
+        @final_path = 'bmps/final/erm_toss/graphics/entity/units/darkarchon'
         @add_border = false
         
       end
