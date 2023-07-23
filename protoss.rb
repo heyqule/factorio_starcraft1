@@ -80,15 +80,6 @@ FileUtils.copy_entry(
   File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/buildings'])
 )
 
-#Copy Units Effects
-puts 'Copying Units Effects'
-['archon'].each do |file|
-  FileUtils.cp(
-    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"custom_pngs/protoss/unit_effects/#{file}-effect.png"]),
-    File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_toss/graphics/entity/units/#{file}/#{file}-effect.png"])
-  )
-end
-
 
 puts 'Copying Icons'
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_toss/graphics/entity/icons']);
