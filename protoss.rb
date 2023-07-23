@@ -14,6 +14,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Run.new).per
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Corsair::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Probe::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Probe::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Templar::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Templar::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Templar::Death.new).perform
@@ -27,6 +28,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Run.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::DarkArchon::Effect.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Shuttle::Run.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Shuttle::Effect.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Scarab::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Reaver::Run.new).perform
 convert_unit('Zealot')
 convert_unit('Dragoon')
 
@@ -41,6 +44,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Psystorm
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonArc.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ArchonHit.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossCorsairSplash.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossBlastCan.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Recall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Disrupt.new).perform
 #
@@ -57,6 +61,9 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Pylon.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Stargate.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::TemplarArchive.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Gateway.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Robotic.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Robotic_Support.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Shield_Battery.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Warpgate.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Warpgate_Animation.new).perform

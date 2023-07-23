@@ -26,6 +26,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::LurkerSp
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DevourerPuke.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::PukeHit.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::DefilerBlood.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::Parasite.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Snare.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Darkswarm.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::HydraProjectile.new).perform

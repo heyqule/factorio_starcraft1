@@ -1,6 +1,7 @@
 battlecruiser_fire,eycbull,Units-Yellow
 dragoon_shot,dragbull,Units-Yellow
 protoss_shot,epbbul,z-bfire-edit-vga
+protoss_blastcan,blastcan,Units-Yellow
 vulture_grenade,grenade,Units-Yellow
 zerg_parasite,parasite,Units-Yellow
 zerg_spores1,spores,Units-Yellow
@@ -8,3 +9,4 @@ zerg_spores2,spore2,Units-Yellow
 zerg_colony,tentacle,Units-Yellow
 zerg_lurker_spike,Spike,Units-Yellow
 zerg_hydra_acid,zspark,Units-Yellow
+zerg_parasite,parasite,Units-Yellow

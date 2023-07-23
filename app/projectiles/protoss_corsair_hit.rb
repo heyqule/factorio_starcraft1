@@ -10,7 +10,7 @@ module ScGraphicConverter
         @frame_count = 7
         @directions = 1
         @output_file = 'protoss-corsair-splash'
-        @inner_path = 'bmps/thingy/corsair_splash'
+        @inner_path = 'bmps/thingy/protoss_corsair_splash'
         @final_path = 'bmps/final/erm_toss/graphics/entity/projectiles/'
         @use_17_rule = false
         @use_flip = false

@@ -46,12 +46,12 @@ FileUtils.copy_entry(
   dirname
 )
 
-MiniMagick::Tool::Convert.new do |convert|
-  convert << '+append'
-  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-effect-front.png"])
-  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-effect-plasma.png"])
-  convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-attack-effect.png'])
-end
+# MiniMagick::Tool::Convert.new do |convert|
+#   convert << '+append'
+#   convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-effect-front.png"])
+#   convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,"generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-effect-plasma.png"])
+#   convert << File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_terran/graphics/entity/units/firebat/firebat-attack-effect.png'])
+# end
 
 puts "Copying Unit Effects"
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_terran/graphics/entity/units']);
