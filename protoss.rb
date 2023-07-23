@@ -51,6 +51,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Disrupt.new).
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Maelstrom.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Feedback.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Scarab_Explosion.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossRedArchonDeath.new).perform
+
 #
 #
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::ArbiterTribunal.new).perform
