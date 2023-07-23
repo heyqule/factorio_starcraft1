@@ -48,6 +48,9 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossC
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Projectiles::ProtossBlastCan.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Recall.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Disrupt.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Maelstrom.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Feedback.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Scarab_Explosion.new).perform
 #
 #
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::ArbiterTribunal.new).perform
