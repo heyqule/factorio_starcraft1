@@ -9,7 +9,7 @@ module ScGraphicConverter
         @image_postfix = '.bmp'
         @frame_count = 1
         @directions = 1
-        @output_file = 'robotic'
+        @output_file = 'robotics_facility'
         @inner_path = 'bmps/protoss/robotic'
         @final_path = 'bmps/final/erm_toss/graphics/entity/buildings'
         @use_17_rule = false
