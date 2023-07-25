@@ -52,6 +52,7 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Maelstrom.new
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Feedback.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::Scarab_Explosion.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TossRedArchonDeath.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::ShieldBattery.new).perform
 
 #
 #
