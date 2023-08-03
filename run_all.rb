@@ -1,4 +1,4 @@
-require './convert_grp'
-#require './terran'
+#require './convert_grp'
+require './terran'
 #require './zerg'
-require './protoss'
+#require './protoss'

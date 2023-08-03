@@ -3,8 +3,12 @@ marine,marine,Units-Yellow
 vessel,wessel,Units-Yellow
 vessel_t,wesselt,Units-Yellow
 tank,tank,Units-Yellow
+tank_thread,tankt,Units-Yellow
+siege_tank,stank,Units-Yellow
+siege_tank_thread,stankt,Units-Yellow
 wraith,phoenix,Units-Yellow
 vulture,vulture,Units-Yellow
+spider,spider,Units-Yellow
 firebat,firebat,Units-Yellow,256x256
 goliath_leg,goliath,Units-Yellow
 goliath_head,goliatht,Units-Yellow

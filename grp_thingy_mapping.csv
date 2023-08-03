@@ -12,6 +12,9 @@ terran_battlecruiser_front,elbbat,z-ofire-edit-vga
 terran_firebat_flamer,flamer,z-ofire-edit-vga,256x256
 terran_tank_flash,ettflash,z-ofire-edit-vga
 terran_battlecruiser_laser,elbfire,z-ofire-edit-vga
+terran_mine_explosion,tmnexplo,z-ofire-edit-vga
+terran_siege_tank_fire,esifire,z-ofire-edit-vga
+terran_grenade_hit,elbhit,z-ofire-edit-vga
 protoss_archon_hit,emshit,Units-Yellow
 protoss_archon_beam,emsbeam,Units-Yellow
 protoss_statsis_field,esflarge,z-bfire-edit-vga

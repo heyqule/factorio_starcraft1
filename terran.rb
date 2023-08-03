@@ -16,7 +16,14 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Wraith::Run.new).perf
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Wraith::Effect.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::ThreadRun.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Tank::Flash.new).perform
+
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::SiegeTank::Run.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::SiegeTank::ThreadRun.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::SiegeTank::Flash.new).perform
+
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Vulture::Run.new).perform
 
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Goliath::Attack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Goliath::RunTop.new).perform
@@ -34,6 +41,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranXLargeE
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranLargeExplosion.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranSmallExplosion.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranLargeRubble.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranGrenadeHit.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Thingy::TerranGrenadeExplode.new).perform
 
 puts "Copying Explosions"
 dirname = File.join([ScGraphicConverter::Configs::INPUT_FOLDER,'generator/bmps/final/erm_terran/graphics/entity/explosion']);
