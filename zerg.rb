@@ -47,8 +47,8 @@ ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::QueenNest.n
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SpawningPool.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Spire.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Spore.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunker.new).perform
-ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkerAttack.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Sunken.new).perform
+ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::SunkenAttack.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::UltralistCavern.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Overmind.new).perform
 ScGraphicConverter::ImageProcessor.new(ScGraphicConverter::Building::Infested_Cmd.new).perform
